@@ -1,1 +1,234 @@
-# Login Test Cases - coming soon
+# Login Module — Test Cases
+
+**Module:** Login
+**Author:** Przemysław Koczwara
+**Last Updated:** 2026-03-31
+**Total TC:** 12
+**JIRA Epic:** EPIC-01 — Login Module Testing
+
+---
+
+## Positive Test Cases (TC-LOGIN-001 to TC-LOGIN-006)
+
+> **Group goal:** Confirm that each user type can successfully log in
+> or receives the correct application response.
+> All 6 users are tested individually because each behaves differently —
+> this is an intentional SauceDemo design for QA practice purposes.
+
+---
+
+## TC-LOGIN-001: Successful login with standard_user
+
+> **Why this TC?**
+> This is the most critical test in the entire application — the "happy path".
+> If standard_user cannot log in, all remaining tests are blocked.
+> Always execute this TC first before any other test case.
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-LOGIN-001 |
+| **Module** | Login |
+| **Priority** | 🔴 High |
+| **Type** | Positive / Functional / Smoke |
+| **Preconditions** | Browser open, navigate to https://www.saucedemo.com |
+| **Test Data** | Username: `standard_user` / Password: `secret_sauce` |
+
+**Steps:**
+1. Open https://www.saucedemo.com
+2. Verify the login form is visible (username field, password field, Login button)
+3. Enter `standard_user` in the Username field
+4. Enter `secret_sauce` in the Password field
+5. Click the **LOGIN** button
+
+**Expected Result:**
+- User is redirected to `/inventory.html`
+- Page header shows **"Swag Labs"**
+- 6 products are visible on the page
+- Shopping cart icon is visible in the top right corner
+
+**Actual Result:** _(fill during execution)_
+**Status:** ⬜ Not Executed
+**Notes:** This is a Smoke Test — run this first before any other TC
+**JIRA:** EPIC-01 / TC-LOGIN-001
+
+---
+
+## TC-LOGIN-002: Login attempt with locked_out_user
+
+> **Why this TC?**
+> locked_out_user is an account blocked by the administrator.
+> We verify that the application correctly denies access and displays
+> a clear error message. This reflects a real business scenario —
+> for example, an employee whose account has been suspended.
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-LOGIN-002 |
+| **Module** | Login |
+| **Priority** | 🔴 High |
+| **Type** | Positive / Functional |
+| **Preconditions** | Browser open, navigate to https://www.saucedemo.com |
+| **Test Data** | Username: `locked_out_user` / Password: `secret_sauce` |
+
+**Steps:**
+1. Open https://www.saucedemo.com
+2. Enter `locked_out_user` in the Username field
+3. Enter `secret_sauce` in the Password field
+4. Click the **LOGIN** button
+
+**Expected Result:**
+- User remains on the login page
+- Error message is displayed:
+  `"Epic sadface: Sorry, this user has been locked out."`
+- No redirect to inventory page occurs
+
+**Actual Result:** _(fill during execution)_
+**Status:** ⬜ Not Executed
+**Notes:** Verify exact error message text — any difference is a bug
+**JIRA:** EPIC-01 / TC-LOGIN-002
+
+---
+
+## TC-LOGIN-003: Login with problem_user
+
+> **Why this TC?**
+> problem_user logs in successfully, but the application behaves
+> incorrectly after login (broken images, UI issues).
+> This TC verifies the login process ONLY — post-login bugs
+> are documented separately in the Inventory module.
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-LOGIN-003 |
+| **Module** | Login |
+| **Priority** | 🟡 Medium |
+| **Type** | Positive / Functional |
+| **Preconditions** | Browser open, navigate to https://www.saucedemo.com |
+| **Test Data** | Username: `problem_user` / Password: `secret_sauce` |
+
+**Steps:**
+1. Open https://www.saucedemo.com
+2. Enter `problem_user` in the Username field
+3. Enter `secret_sauce` in the Password field
+4. Click the **LOGIN** button
+
+**Expected Result:**
+- User is redirected to `/inventory.html`
+- Page header shows **"Swag Labs"**
+- Login process itself completes without errors
+
+**Actual Result:** _(fill during execution)_
+**Status:** ⬜ Not Executed
+**Notes:** Login should succeed — post-login UI bugs are out of scope for this TC
+**JIRA:** EPIC-01 / TC-LOGIN-003
+
+---
+
+## TC-LOGIN-004: Login with performance_glitch_user
+
+> **Why this TC?**
+> performance_glitch_user logs in with an intentional delay of several seconds.
+> We verify that the application eventually responds correctly despite the delay.
+> In a real project this would be flagged as a performance bug.
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-LOGIN-004 |
+| **Module** | Login |
+| **Priority** | 🟡 Medium |
+| **Type** | Positive / Functional / Performance (manual) |
+| **Preconditions** | Browser open, navigate to https://www.saucedemo.com |
+| **Test Data** | Username: `performance_glitch_user` / Password: `secret_sauce` |
+
+**Steps:**
+1. Open https://www.saucedemo.com
+2. Enter `performance_glitch_user` in the Username field
+3. Enter `secret_sauce` in the Password field
+4. Click the **LOGIN** button
+5. Note the time between click and page redirect (use stopwatch or DevTools)
+
+**Expected Result:**
+- User is eventually redirected to `/inventory.html`
+- Redirect occurs within a reasonable time (note actual time in results)
+- No error message is displayed
+
+**Actual Result:** _(fill during execution)_
+**Status:** ⬜ Not Executed
+**Notes:** Record actual login time in seconds — if > 3s, raise as Medium bug
+**JIRA:** EPIC-01 / TC-LOGIN-004
+
+---
+
+## TC-LOGIN-005: Login with error_user
+
+> **Why this TC?**
+> error_user logs in successfully but generates errors during the checkout process.
+> This TC confirms that the login itself works correctly —
+> checkout-specific bugs are documented in the Checkout module.
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-LOGIN-005 |
+| **Module** | Login |
+| **Priority** | 🟡 Medium |
+| **Type** | Positive / Functional |
+| **Preconditions** | Browser open, navigate to https://www.saucedemo.com |
+| **Test Data** | Username: `error_user` / Password: `secret_sauce` |
+
+**Steps:**
+1. Open https://www.saucedemo.com
+2. Enter `error_user` in the Username field
+3. Enter `secret_sauce` in the Password field
+4. Click the **LOGIN** button
+
+**Expected Result:**
+- User is redirected to `/inventory.html`
+- Page header shows **"Swag Labs"**
+- Login process completes without errors
+
+**Actual Result:** _(fill during execution)_
+**Status:** ⬜ Not Executed
+**Notes:** Checkout-specific bugs for this user documented in TC-CHECKOUT
+**JIRA:** EPIC-01 / TC-LOGIN-005
+
+---
+
+## TC-LOGIN-006: Login with visual_user
+
+> **Why this TC?**
+> visual_user logs in successfully, but the application UI contains
+> intentional visual defects (misaligned elements, incorrect images).
+> This TC verifies the login process only —
+> visual bugs are documented in the Inventory module.
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-LOGIN-006 |
+| **Module** | Login |
+| **Priority** | 🟡 Medium |
+| **Type** | Positive / Functional |
+| **Preconditions** | Browser open, navigate to https://www.saucedemo.com |
+| **Test Data** | Username: `visual_user` / Password: `secret_sauce` |
+
+**Steps:**
+1. Open https://www.saucedemo.com
+2. Enter `visual_user` in the Username field
+3. Enter `secret_sauce` in the Password field
+4. Click the **LOGIN** button
+
+**Expected Result:**
+- User is redirected to `/inventory.html`
+- Page header shows **"Swag Labs"**
+- Login process completes without errors
+
+**Actual Result:** _(fill during execution)_
+**Status:** ⬜ Not Executed
+**Notes:** Visual bugs post-login are documented in TC-INVENTORY
+**JIRA:** EPIC-01 / TC-LOGIN-006
+```
+
+---
+
+Wiadomość commita:
+```
+test(login): update TC-LOGIN-001 through TC-LOGIN-006 to full English
