@@ -225,10 +225,4 @@
 **Status:** ⬜ Not Executed
 **Notes:** Visual bugs post-login are documented in TC-INVENTORY
 **JIRA:** EPIC-01 / TC-LOGIN-006
-```
 
----
-
-Wiadomość commita:
-```
-test(login): update TC-LOGIN-001 through TC-LOGIN-006 to full English
