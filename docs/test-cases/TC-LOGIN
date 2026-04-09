@@ -229,8 +229,12 @@
 
 ## Negative Test Cases (TC-LOGIN-007 to TC-LOGIN-012)
 
----
+> **Group goal:** Check that the application stops wrong login attempts
+> and shows clear error messages to the user.
+> Tests check empty fields, wrong username or password, and a simple
+> security test (SQL Injection) to make sure the application is safe.
 
+---
 
 ## TC-LOGIN-007: Login attempt with empty username field
 
