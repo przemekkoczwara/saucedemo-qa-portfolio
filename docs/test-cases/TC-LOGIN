@@ -355,7 +355,7 @@
 | **Priority** | 🔴 High |
 | **Type** | Negative / Functional |
 | **Preconditions** | Browser open, navigate to https://www.saucedemo.com |
-| **Test Data** | Username: invalid_user / Password: `secret_sauce` |
+| **Test Data** | Username: `invalid_user` / Password: `secret_sauce` |
 
 **Steps:**
 1. Open https://www.saucedemo.com
