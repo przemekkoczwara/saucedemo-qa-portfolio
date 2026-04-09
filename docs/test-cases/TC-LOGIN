@@ -226,3 +226,140 @@
 **Notes:** Visual bugs post-login are documented in TC-INVENTORY
 **JIRA:** EPIC-01 / TC-LOGIN-006
 
+
+## Negative Test Cases (TC-LOGIN-007 to TC-LOGIN-012)
+
+---
+
+
+## TC-LOGIN-007: Login attempt with empty username field
+
+> **Why this TC?**
+> Empty username is one of the most common user mistakes.
+> We verify that the application correctly blocks login attempt
+> and displays a clear error message instead of crashing or allowing access.
+
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-LOGIN-007 |
+| **Module** | Login |
+| **Priority** | 🔴 High |
+| **Type** | Negative / Functional |
+| **Preconditions** | Browser open, navigate to https://www.saucedemo.com |
+| **Test Data** | Username: (empty) / Password: `secret_sauce` |
+
+**Steps:**
+1. Open https://www.saucedemo.com
+2. Leave Username field empty
+3. Enter `secret_sauce` in the Password field
+4. Click the **LOGIN** button
+
+**Expected Result:**
+- User remains on the login page
+- Error message is displayed: "Epic sadface: Username is required"
+- No redirect to inventory page occurs
+
+**Actual Result:** _(fill during execution)_
+**Status:** ⬜ Not Executed
+**Notes:** Verify exact error message text — any difference is a bug
+**JIRA:** EPIC-01 / TC-LOGIN-007
+
+---
+
+##TC-LOGIN-008: Login attempt with empty Password field
+
+> **Why this TC?**
+> Empty Password field is one of the most common user mistakes.
+> We verify that the application correctly block login attempt 
+> and displays a clear error message instead of crashing or allowing access.
+
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-LOGIN-008 |
+| **Module** | Login |
+| **Priority** | 🔴 High |
+| **Type** | Negative / Functional |
+| **Preconditions** | Browser open, navigate to https://www.saucedemo.com |
+| **Test Data** | Username: `standard_user` / Password: (empty) |
+
+
+**Steps:**
+1. Open https://www.saucedemo.com
+2. Enter `standard_user` in the Username field
+3. Leave Password field empty
+4. Click the **LOGIN** button
+
+**Expected Results:**
+- User remains on the login page
+- Error message is displayed: "Epic sadface: Password is required"
+- No redirect  to inventory page occurs
+
+**Actual Result:** _(fill during execution)_
+**Status:** ⬜ Not Executed
+**Notes:** Verify exact error message text — any difference is a bug
+**JIRA:** EPIC-01 / TC-LOGIN-008
+
+---
+
+##TC-LOGIN-009: Login attempt with empty both field "Username" and "Password"
+
+> **Why this TC?**
+> Empty Username & Password field are one of the most common mistakes.
+> We verify that the application correctly blocks login attempt and
+> displays a clear error message instead of crashing or allowing access.
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-LOGIN-009 |
+| **Module** | Login |
+| **Priority** | 🔴 High |
+| **Type** | Negative / Functional |
+| **Preconditions** | Browser open, navigate to https://www.saucedemo.com |
+| **Test Data** | Username: (empty) / Password: (empty) |
+
+**Steps:**
+1. Open https://www.saucedemo.com
+2. Leave Username field empty
+3. Leave Password field empty
+4. Click the **LOGIN** button
+
+**Expected Results:**
+- User remains on the login page
+- Error message is displayed: `Epic sadface: Username is required`
+- No redirect  to inventory page occurs
+
+**Actual Result:** _(fill during execution)_
+**Status:** ⬜ Not Executed
+**Notes:** Verify exact error message text — any difference is a bug
+**JIRA:** EPIC-01 / TC-LOGIN-009
+
+---
+
+##TC-LOGIN-010: Login attempt with invalid username
+
+> **Why this TC?**
+> Ivalid Username is one of the most common mistakes.
+> We veryfy that the application correctly blocks login attempt and 
+> displays a clear error message instead of crashing or allowing access.
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-LOGIN-009 |
+| **Module** | Login |
+| **Priority** | 🔴 High |
+| **Type** | Negative / Functional |
+| **Preconditions** | Browser open, navigate to https://www.saucedemo.com |
+| **Test Data** | Username: invalid_user / Password: secret_sauce |
+
+**Steps:**
+1. Open https://www.saucedemo.com
+2. Enter `invalid_user` in Username field
+3. Enter `secret_sauce` in Password field
+4. Click the **LOGIN** button
+
+**Expected Results:**
+- User remains on the login page
+- Error message is displayed: `Epic sadface: Username and password do not match any user in this service`
+- No redirect  to inventory page occurs
