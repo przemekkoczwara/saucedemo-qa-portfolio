@@ -327,7 +327,7 @@
 
 **Expected Results:**
 - User remains on the login page
-- Error message is displayed: `Epic sadface: Username is required`
+- Error message is displayed: "Epic sadface: Username is required"
 - No redirect  to inventory page occurs
 
 **Actual Result:** _(fill during execution)_
@@ -337,21 +337,21 @@
 
 ---
 
-##TC-LOGIN-010: Login attempt with invalid username
+## TC-LOGIN-010: Login attempt with invalid username
 
 > **Why this TC?**
-> Ivalid Username is one of the most common mistakes.
-> We veryfy that the application correctly blocks login attempt and 
+> Invalid Username is one of the most common mistakes.
+> We verify that the application correctly blocks login attempt and 
 > displays a clear error message instead of crashing or allowing access.
 
 | Field | Details |
 |-------|---------|
-| **ID** | TC-LOGIN-009 |
+| **ID** | TC-LOGIN-010 |
 | **Module** | Login |
 | **Priority** | 🔴 High |
 | **Type** | Negative / Functional |
 | **Preconditions** | Browser open, navigate to https://www.saucedemo.com |
-| **Test Data** | Username: invalid_user / Password: secret_sauce |
+| **Test Data** | Username: invalid_user / Password: `secret_sauce` |
 
 **Steps:**
 1. Open https://www.saucedemo.com
@@ -361,5 +361,81 @@
 
 **Expected Results:**
 - User remains on the login page
-- Error message is displayed: `Epic sadface: Username and password do not match any user in this service`
+- Error message is displayed: "Epic sadface: Username and password do not match any user in this service"
 - No redirect  to inventory page occurs
+
+**Actual Result:** _(fill during execution)_
+**Status:** ⬜ Not Executed
+**Notes:** Verify exact error message text — any difference is a bug
+**JIRA:** EPIC-01 / TC-LOGIN-010
+
+---
+
+## TC-LOGIN-011: Login attempt with invalid Password 
+
+> **Why this TC?**
+> Invalid Password is one of the most common mistakes.
+> We verify that the application correctly blocks login attempt and 
+> displays a clear error message instead of crashing or allowing access.
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-LOGIN-011 |
+| **Module** | Login |
+| **Priority** | 🔴 High |
+| **Type** | Negative / Functional |
+| **Preconditions** | Browser open, navigate to https://www.saucedemo.com |
+| **Test Data** | Username: `standard_user` / Password: `invalid_password` |
+
+**Steps:**
+1. Open https://www.saucedemo.com
+2. Enter `standard_user` in Username field
+3. Enter `invalid_password` in Password field
+4. Click the **LOGIN** button
+
+**Expected Results:**
+- User remains on the login page
+- Error message is displayed: "Epic sadface: Username and password do not match any user in this service"
+- No redirect  to inventory page occurs
+
+**Actual Result:** _(fill during execution)_
+**Status:** ⬜ Not Executed
+**Notes:** Verify exact error message text — any difference is a bug
+**JIRA:** EPIC-01 / TC-LOGIN-011
+
+---
+
+## TC-LOGIN-012: Login attempt with SQL Injection in Username field
+
+> **Why this TC?**
+> SQL Injection is a common hacking technique where malicious code
+> is inserted into a login field to bypass authentication.
+> We verify that the application correctly blocks this attack and 
+> does not grant unauthorized access.
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-LOGIN-012 |
+| **Module** | Login |
+| **Priority** | 🔴 High |
+| **Type** | Negative / Functional |
+| **Preconditions** | Browser open, navigate to https://www.saucedemo.com |
+| **Test Data** | Username: `' OR '1'='1` / Password: `test123` |
+
+**Steps:**
+1. Open https://www.saucedemo.com
+2. Enter `' OR '1'='1` in Username field
+3. Enter `test123` in Password field
+4. Click the **LOGIN** button
+
+**Expected Results:**
+- User remains on the login page
+- Error message is displayed: "Epic sadface: Username and password do not match any user in this service"
+- No redirect  to inventory page occurs
+
+**Actual Result:** _(fill during execution)_
+**Status:** ⬜ Not Executed
+**Notes:** Verify exact error message text — any difference is a bug
+**JIRA:** EPIC-01 / TC-LOGIN-012
+
+---
