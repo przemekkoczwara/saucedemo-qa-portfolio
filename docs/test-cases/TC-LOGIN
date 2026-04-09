@@ -46,9 +46,12 @@
 - 6 products are visible on the page
 - Shopping cart icon is visible in the top right corner
 
-**Actual Result:** _(fill during execution)_
-**Status:** ⬜ Not Executed
-**Notes:** This is a Smoke Test — run this first before any other TC
+**Actual Result:** 
+User redirected to /inventory.html. 
+Page header shows "Swag Labs".
+6 products visible. 
+Shopping cart icon visible in top right corner.
+**Status:** ✅ Pass
 **JIRA:** EPIC-01 / TC-LOGIN-001
 
 ---
@@ -82,9 +85,12 @@
   `"Epic sadface: Sorry, this user has been locked out."`
 - No redirect to inventory page occurs
 
-**Actual Result:** _(fill during execution)_
-**Status:** ⬜ Not Executed
-**Notes:** Verify exact error message text — any difference is a bug
+**Actual Result:**
+User  remains on the login page
+Error message is displayed:
+"Epic sadface: Sorry, this user has been locked out."
+No redirect to inventory page occurs
+Status: ✅ Pass
 **JIRA:** EPIC-01 / TC-LOGIN-002
 
 ---
@@ -117,9 +123,11 @@
 - Page header shows **"Swag Labs"**
 - Login process itself completes without errors
 
-**Actual Result:** _(fill during execution)_
-**Status:** ⬜ Not Executed
-**Notes:** Login should succeed — post-login UI bugs are out of scope for this TC
+**Actual Result:**
+User redirected to /inventory.html.
+Page header shows "Swag Labs".
+Login process itself completes without errors
+Status: ✅ Pass
 **JIRA:** EPIC-01 / TC-LOGIN-003
 
 ---
@@ -152,10 +160,15 @@
 - Redirect occurs within a reasonable time (note actual time in results)
 - No error message is displayed
 
-**Actual Result:** _(fill during execution)_
-**Status:** ⬜ Not Executed
+**Actual Result:**
+User redirected to /inventory.html.
+Login delay observed: 5.064 -> ~ 5 seconds
+No error message displayed.
+Status: ✅ Pass
 **Notes:** Record actual login time in seconds — if > 3s, raise as Medium bug
-**JIRA:** EPIC-01 / TC-LOGIN-004
+**JIRA:** EPIC-01 / TC-LOGIN-004 
+**Related Bug:**  
+EPIC-01 / TC-LOGIN-005 Login process takes ~5 seconds for performance_glitch_userLogin process takes ~5 seconds for performance_glitch_user
 
 ---
 
