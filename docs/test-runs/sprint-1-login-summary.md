@@ -17,7 +17,7 @@
 ## Bugs Found
 | ID | Title | Severity | Status |
 |----|-------|----------|--------|
-| SPD-19 | [PERFORMANCE] Login takes ~5s | Medium | Open |
+| SPD-19 | [PERFORMANCE] Login process takes ~5 seconds for performance_glitch_user| Medium | Open |
 
 ## Notes
 - All login scenarios passed successfully
