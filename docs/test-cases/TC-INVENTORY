@@ -35,3 +35,15 @@
 1. Log in as standard_user (see TC-LOGIN-001)
 2. Verify that /inventory.html page loads
 3. Observe the page content
+
+**Expected Result:**
+- The /inventory.html page loads successfully
+- Page header shows "Swag Labs"
+- 6 products are visible on the page
+- Shopping cart icon is visible in the top right corner
+- Product sorting dropdown is visible
+
+**Actual Result:**
+**Status:**
+**Notes:** Smoke Test — execute this first before any other TC in this module
+**JIRA:** EPIC-02 / TC-INVENTORY-001
