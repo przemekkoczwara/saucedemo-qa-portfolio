@@ -1,1 +1,37 @@
-# Inventory Test Cases  - coming soon
+# Product Catalog (Inventory) — Test Cases
+
+**Module:** Inventory
+**Author:** Przemysław Koczwara
+**Last Updated:** 2026-04-10
+**Total TC:** 13
+**JIRA Epic:** EPIC-02 — Product Catalog (Inventory) Testing
+
+---
+
+## Smoke Test Cases (TC-INVENTORY-001)
+
+> **Group goal:** Verify that the inventory page loads correctly
+> after login before proceeding with further testing.
+
+---
+
+## TC-INVENTORY-001: Inventory page loads correctly after login
+
+> **Why this TC?**
+> This is the entry point for all inventory tests.
+> If the page does not load correctly, all remaining
+> TC in this module are blocked and cannot be executed.
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-INVENTORY-001 |
+| **Module** | Inventory |
+| **Priority** | 🔴 High |
+| **Type** | Positive / Functional / Smoke |
+| **Preconditions** | User is logged in as standard_user, on /inventory.html page |
+| **Test Data** | N/A |
+
+**Steps:**
+1. Log in as standard_user (see TC-LOGIN-001)
+2. Verify that /inventory.html page loads
+3. Observe the page content
