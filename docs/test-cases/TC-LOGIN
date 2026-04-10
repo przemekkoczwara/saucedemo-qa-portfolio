@@ -2,7 +2,7 @@
 
 **Module:** Login
 **Author:** Przemysław Koczwara
-**Last Updated:** 2026-03-31
+**Last Updated:** 2026-04-09
 **Total TC:** 12
 **JIRA Epic:** EPIC-01 — Login Module Testing
 
@@ -47,10 +47,10 @@
 - Shopping cart icon is visible in the top right corner
 
 **Actual Result:** 
-User redirected to /inventory.html. 
-Page header shows "Swag Labs".
-6 products visible. 
-Shopping cart icon visible in top right corner.
+- User redirected to /inventory.html. 
+- Page header shows "Swag Labs".
+- 6 products visible. 
+- Shopping cart icon visible in top right corner.
 **Status:** ✅ Pass
 **JIRA:** EPIC-01 / TC-LOGIN-001
 
@@ -86,11 +86,10 @@ Shopping cart icon visible in top right corner.
 - No redirect to inventory page occurs
 
 **Actual Result:**
-User  remains on the login page
-Error message is displayed:
-"Epic sadface: Sorry, this user has been locked out."
-No redirect to inventory page occurs
-Status: ✅ Pass
+- User  remains on the login page
+- Error message is displayed: "Epic sadface: Sorry, this user has been locked out."
+- No redirect to inventory page occurs
+**Status:** ✅ Pass
 **JIRA:** EPIC-01 / TC-LOGIN-002
 
 ---
@@ -124,10 +123,10 @@ Status: ✅ Pass
 - Login process itself completes without errors
 
 **Actual Result:**
-User redirected to /inventory.html.
-Page header shows "Swag Labs".
-Login process itself completes without errors
-Status: ✅ Pass
+- User redirected to /inventory.html.
+- Page header shows "Swag Labs".
+- Login process itself completes without errors
+**Status:** ✅ Pass
 **JIRA:** EPIC-01 / TC-LOGIN-003
 
 ---
@@ -161,14 +160,13 @@ Status: ✅ Pass
 - No error message is displayed
 
 **Actual Result:**
-User redirected to /inventory.html.
-Login delay observed: 5.064 -> ~ 5 seconds
-No error message displayed.
-Status: ✅ Pass
-**Notes:** Record actual login time in seconds — if > 3s, raise as Medium bug
+- User redirected to /inventory.html.
+- Login delay observed: 5.064 -> ~ 5 seconds
+- No error message displayed.
+**Status:** ✅ Pass
 **JIRA:** EPIC-01 / TC-LOGIN-004 
 **Related Bug:**  
-EPIC-01 / TC-LOGIN-005 Login process takes ~5 seconds for performance_glitch_userLogin process takes ~5 seconds for performance_glitch_user
+SPD-19 - [PERFORMANCE] Login process takes ~5 seconds for performance_glitch_user
 
 ---
 
@@ -199,9 +197,11 @@ EPIC-01 / TC-LOGIN-005 Login process takes ~5 seconds for performance_glitch_use
 - Page header shows **"Swag Labs"**
 - Login process completes without errors
 
-**Actual Result:** _(fill during execution)_
-**Status:** ⬜ Not Executed
-**Notes:** Checkout-specific bugs for this user documented in TC-CHECKOUT
+**Actual Result:** 
+- User redirected to /inventory.html
+- Page header shows "Swag Labs".
+- Login process itself completes without errors
+**Status:** ✅ Pass
 **JIRA:** EPIC-01 / TC-LOGIN-005
 
 ---
@@ -234,8 +234,11 @@ EPIC-01 / TC-LOGIN-005 Login process takes ~5 seconds for performance_glitch_use
 - Page header shows **"Swag Labs"**
 - Login process completes without errors
 
-**Actual Result:** _(fill during execution)_
-**Status:** ⬜ Not Executed
+**Actual Result:**
+- User is redirected to `/inventory.html`
+- Page header shows **"Swag Labs"**
+- Login process completes without errors
+**Status:** ✅ Pass
 **Notes:** Visual bugs post-login are documented in TC-INVENTORY
 **JIRA:** EPIC-01 / TC-LOGIN-006
 
@@ -277,8 +280,11 @@ EPIC-01 / TC-LOGIN-005 Login process takes ~5 seconds for performance_glitch_use
 - Error message is displayed: "Epic sadface: Username is required"
 - No redirect to inventory page occurs
 
-**Actual Result:** _(fill during execution)_
-**Status:** ⬜ Not Executed
+**Actual Result:
+- User remains on the login page
+- Error message is displayed: "Epic sadface: Username is required"
+- No redirect to inventory page occurs
+**Status:** ✅ Pass
 **Notes:** Verify exact error message text — any difference is a bug
 **JIRA:** EPIC-01 / TC-LOGIN-007
 
@@ -313,8 +319,11 @@ EPIC-01 / TC-LOGIN-005 Login process takes ~5 seconds for performance_glitch_use
 - Error message is displayed: "Epic sadface: Password is required"
 - No redirect  to inventory page occurs
 
-**Actual Result:** _(fill during execution)_
-**Status:** ⬜ Not Executed
+**Actual Result:
+- User remains on the login page
+- Error message is displayed: "Epic sadface: Password is required"
+- No redirect  to inventory page occurs
+**Status:** ✅ Pass
 **Notes:** Verify exact error message text — any difference is a bug
 **JIRA:** EPIC-01 / TC-LOGIN-008
 
@@ -347,8 +356,11 @@ EPIC-01 / TC-LOGIN-005 Login process takes ~5 seconds for performance_glitch_use
 - Error message is displayed: "Epic sadface: Username is required"
 - No redirect  to inventory page occurs
 
-**Actual Result:** _(fill during execution)_
-**Status:** ⬜ Not Executed
+**Actual Result:** 
+- User remains on the login page
+- Error message is displayed: "Epic sadface: Username is required"
+- No redirect  to inventory page occurs
+**Status:** ✅ Pass
 **Notes:** Verify exact error message text — any difference is a bug
 **JIRA:** EPIC-01 / TC-LOGIN-009
 
@@ -381,8 +393,11 @@ EPIC-01 / TC-LOGIN-005 Login process takes ~5 seconds for performance_glitch_use
 - Error message is displayed: "Epic sadface: Username and password do not match any user in this service"
 - No redirect  to inventory page occurs
 
-**Actual Result:** _(fill during execution)_
-**Status:** ⬜ Not Executed
+**Actual Result:**
+- User remains on the login page
+- Error message is displayed: "Epic sadface: Username and password do not match any user in this service"
+- No redirect  to inventory page occurs
+**Status:** ✅ Pass
 **Notes:** Verify exact error message text — any difference is a bug
 **JIRA:** EPIC-01 / TC-LOGIN-010
 
@@ -415,8 +430,11 @@ EPIC-01 / TC-LOGIN-005 Login process takes ~5 seconds for performance_glitch_use
 - Error message is displayed: "Epic sadface: Username and password do not match any user in this service"
 - No redirect  to inventory page occurs
 
-**Actual Result:** _(fill during execution)_
-**Status:** ⬜ Not Executed
+**Actual Result:** 
+- User remains on the login page
+- Error message is displayed: "Epic sadface: Username and password do not match any user in this service"
+- No redirect  to inventory page occurs
+**Status:** ✅ Pass
 **Notes:** Verify exact error message text — any difference is a bug
 **JIRA:** EPIC-01 / TC-LOGIN-011
 
@@ -450,8 +468,11 @@ EPIC-01 / TC-LOGIN-005 Login process takes ~5 seconds for performance_glitch_use
 - Error message is displayed: "Epic sadface: Username and password do not match any user in this service"
 - No redirect  to inventory page occurs
 
-**Actual Result:** _(fill during execution)_
-**Status:** ⬜ Not Executed
+**Actual Result:**
+- User remains on the login page
+- Error message is displayed: "Epic sadface: Username and password do not match any user in this service"
+- No redirect  to inventory page occurs
+**Status:** ✅ Pass
 **Notes:** Verify exact error message text — any difference is a bug
 **JIRA:** EPIC-01 / TC-LOGIN-012
 
