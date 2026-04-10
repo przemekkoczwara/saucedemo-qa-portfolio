@@ -47,3 +47,75 @@
 **Status:**
 **Notes:** Smoke Test — execute this first before any other TC in this module
 **JIRA:** EPIC-02 / TC-INVENTORY-001
+
+---
+
+## TC-INVENTORY-002: All 6 products are displayed on inventory page
+
+> **Why this TC?**
+> Verify all 6 products are correctly displayed on inventory page.
+> Missing or incorrect product count would indicate a data loading issue.
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-INVENTORY-002 |
+| **Module** | Inventory |
+| **Priority** | 🟡 Medium |
+| **Type** | Positive / Functional |
+| **Preconditions** | User is logged in as standard_user, on /inventory.html page |
+| **Test Data** | N/A |
+
+**Steps:**
+1. Log in as standard_user (see TC-LOGIN-001)
+2. Verify that /inventory.html page loads
+3. Content page shows 6 products block
+
+
+**Expected Result:**
+- 6 products are visible on the page
+- Each product has: name, description, price and image
+- Add to cart button is visible for each product
+
+**Actual Result:**
+**Status:**
+**JIRA:** EPIC-02 / TC-INVENTORY-002
+
+
+---
+
+
+## TC-INVENTORY-003: Product sorted alphabetically A→Z
+
+> **Why this TC?**
+> Sorting functionality allows users to find products faster.
+> If sorting does not work correctly, users may not find
+> the product they are looking for, which negatively impacts
+> user experience.
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-INVENTORY-003 |
+| **Module** | Inventory |
+| **Priority** | 🟡 Medium |
+| **Type** | Positive / Functional |
+| **Preconditions** | User is logged in as standard_user, on /inventory.html page |
+| **Test Data** | N/A |
+
+**Steps:**
+1. Log in as standard_user (see TC-LOGIN-001)
+2. Verify that /inventory.html page loads
+3. Locate the sorting dropdown in the top right corner
+4. Select `Name (A to Z)` from the dropdown
+5. Observe the order of displayed products
+
+
+**Expected Result:**
+- 6 products are visible on the page
+- Products are sorted alphabetically from A to Z by name
+- First product: "Sauce Labs Backpack"
+- Last product: "Test.allTheThings() T-Shirt (Red)"
+
+**Actual Result:**
+**Status:**
+**JIRA:** EPIC-02 / TC-INVENTORY-003
+
