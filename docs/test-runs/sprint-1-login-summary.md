@@ -4,7 +4,7 @@
 **Date:** 2026-04-10
 **Tester:** Przemysław Koczwara
 **Module:** Login
-**Environment:** Chrome 146, macOS, saucedemo.com
+**Environment:** Chrome 146.0.7680.178 (arm64) macOS 26.3.1 (25D2128), saucedemo.com
 
 ## Results
 
