@@ -119,3 +119,144 @@
 **Status:**
 **JIRA:** EPIC-02 / TC-INVENTORY-003
 
+---
+
+## TC-INVENTORY-004: Product sorted alphabetically A→Z
+
+> **Why this TC?**
+> Sorting Z→A is a separate function from A→Z and must be tested independently.
+> If only one direction works, it indicates a partial sorting bug
+> that could affect user experience.
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-INVENTORY-004 |
+| **Module** | Inventory |
+| **Priority** | 🟡 Medium |
+| **Type** | Positive / Functional |
+| **Preconditions** | User is logged in as standard_user, on /inventory.html page |
+| **Test Data** | N/A |
+
+**Steps:**
+1. Log in as standard_user (see TC-LOGIN-001)
+2. Verify that /inventory.html page loads
+3. Locate the sorting dropdown in the top right corner
+4. Select `Name (Z to A)` from the dropdown
+5. Observe the order of displayed products
+
+**Expected Result:**
+- 6 products are visible on the page
+- Products are sorted alphabetically from Z to A by name
+- First product: "Test.allTheThings() T-Shirt (Red)"
+- Last product: "Sauce Labs Backpack"
+
+**Actual Result:**
+**Status:**
+**JIRA:** EPIC-02 / TC-INVENTORY-004
+
+---
+
+## TC-INVENTORY-005: Price low to high
+
+> **Why this TC?**
+> Verify that the application sorting dropdown correctly orders inventory items by ascending price
+
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-INVENTORY-005 |
+| **Module** | Inventory |
+| **Priority** | 🟡 Medium |
+| **Type** | Positive / Functional |
+| **Preconditions** | User is logged in as standard_user, on /inventory.html page |
+| **Test Data** | N/A |
+
+**Steps:**
+1. Log in as standard_user (see TC-LOGIN-001)
+2. Verify that /inventory.html page loads
+3. Locate the sorting dropdown in the top right corner
+4. Select `Price (Low to High)` from the dropdown
+5. Observe the order of displayed products
+
+**Expected Result:**
+- 6 products are visible on the page
+- Product are sorted by price in ascending order (lowest to highest)
+- First product: "Sauce Labs Onesie" with price ($7.99)
+- Last product: "Sauce Labs Fleece Jacket" with price ($49.99)
+
+**Actual Result:**
+**Status:**
+**JIRA:** EPIC-02 / TC-INVENTORY-005
+
+---
+
+## TC-INVENTORY-006: Price high to low
+
+> **Why this TC?**
+> Verify that the application sorting dropdown correctly orders inventory items by descending price
+
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-INVENTORY-006 |
+| **Module** | Inventory |
+| **Priority** | 🟡 Medium |
+| **Type** | Positive / Functional |
+| **Preconditions** | User is logged in as standard_user, on /inventory.html page |
+| **Test Data** | N/A |
+
+**Steps:**
+1. Log in as standard_user (see TC-LOGIN-001)
+2. Verify that /inventory.html page loads
+3. Locate the sorting dropdown in the top right corner
+4. Select `Price (High to Low)` from the dropdown
+5. Observe the order of displayed products
+
+**Expected Result:**
+- 6 products are visible on the page
+- Products are sorted by price in descending order (highest to lowest)
+- First product: "Sauce Labs Fleece Jacket" with price ($49.99)
+- Last product: "Sauce Labs Onesie" with price ($7.99)
+
+**Actual Result:**
+**Status:**
+**JIRA:** EPIC-02 / TC-INVENTORY-006
+
+---
+
+## TC-INVENTORY-007: Click product → product details page 
+
+> **Why this TC?**
+> Verify that clicking a product opens the correct product details page with accurate information
+
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-INVENTORY-007 |
+| **Module** | Inventory |
+| **Priority** | 🟡 Medium |
+| **Type** | Positive / Functional |
+| **Preconditions** | User is logged in as standard_user, on /inventory.html page |
+| **Test Data** | N/A |
+
+**Steps:**
+1. Log in as standard_user (see TC-LOGIN-001)
+2. Verify that /inventory.html page loads
+3. Locate the product "Sauce Labs Backpack"
+4. Click on the product name "Sauce Labs Backpack"
+5. Observe the opened product details page
+
+**Expected Result:**
+- Product details page opens successfully 
+- URL contains `inventory-item.html?id=4`
+- Product name "Sauce Labs Backpack" is displayed
+- Product description is visible
+- Product price is ($29.99) is displayed
+- Product image is visible
+- "Add to cart" button is visible
+
+**Actual Result:**
+**Status:**
+**JIRA:** EPIC-02 / TC-INVENTORY-007
+
+---
