@@ -253,10 +253,85 @@
 - Product description is visible
 - Product price is ($29.99) is displayed
 - Product image is visible
-- "Add to cart" button is visible
+- `Add to cart` button is visible
 
 **Actual Result:**
 **Status:**
 **JIRA:** EPIC-02 / TC-INVENTORY-007
+
+---
+
+## TC-INVENTORY-008: Add to cart from inventory page
+
+> **Why this TC?**
+> Verify that clicking "Add to cart" button on inventory page adds product to cart and updates cart badge counter.
+
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-INVENTORY-008 |
+| **Module** | Inventory |
+| **Priority** | 🟡 Medium |
+| **Type** | Positive / Functional |
+| **Preconditions** | User is logged in as standard_user, on /inventory.html page |
+| **Test Data** | N/A |
+
+**Steps:**
+1. Log in as standard_user (see TC-LOGIN-001)
+2. Verify that /inventory.html page loads
+3. Locate the product "Sauce Labs Backpack"
+4. Click the `Add to cart`button for this product
+5. Locate the cart icon in the top right corner
+6. Observe the cart badge counter 
+
+**Expected Result:**
+- Product "Sauce Labs Backpack" is added to the cart
+- Cart badge counter is displayed
+- Cart badge counter increases by 1
+- `Add to cart`button changes to `Remove` button
+
+**Actual Result:**
+**Status:**
+**JIRA:** EPIC-02 / TC-INVENTORY-008
+
+---
+
+## TC-INVENTORY-009: Add to cart from product details page
+
+> **Why this TC?**
+> Verify that clicking "Add to cart" button on product page adds product to cart and updates cart badge counter.
+
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-INVENTORY-009 |
+| **Module** | Inventory |
+| **Priority** | 🟡 Medium |
+| **Type** | Positive / Functional |
+| **Preconditions** | User is logged in as standard_user, on /inventory.html page |
+| **Test Data** | N/A |
+
+
+**Steps:**
+1. Log in as standard_user (see TC-LOGIN-001)
+2. Verify that /inventory.html page loads
+3. Locate the product "Sauce Labs Backpack"
+4. Click on the product name "Sauce Labs Backpack"
+5. Verify that product details page for "Sauce Labs Backpack" is displayed
+6. Click `Add to cart` button
+7. Locate the cart icon in the top right corner
+8. Observe the cart badge counter 
+
+**Expected Result:**
+- Product details page opens successfully
+- Product name `Sauce Labs Backpack` is displayed
+- Clicking `Add to cart` adds product to cart
+- Cart badge counter is displayed
+- Cart badge counter increases by 1
+- `Add to cart` button changes to `Remove`
+
+**Actual Result:**
+**Status:**
+**JIRA:** EPIC-02 / TC-INVENTORY-009
 
 ---
