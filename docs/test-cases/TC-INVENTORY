@@ -335,3 +335,38 @@
 **JIRA:** EPIC-02 / TC-INVENTORY-009
 
 ---
+
+## TC-INVENTORY-010: Remove form cart (inventory page)
+
+> **Why this TC?**
+> Verify that clicking "Remove" button on inventory page removes product from cart and updates cart badge counter correctly.
+
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-INVENTORY-010 |
+| **Module** | Inventory |
+| **Priority** | 🟡 Medium |
+| **Type** | Positive / Functional |
+| **Preconditions** | User is logged in as standard_user, on /inventory.html page, and product "Sauce Labs Backpack" is arleady added to cart |
+| **Test Data** | N/A |
+
+
+**Steps:**
+1. Verify that /inventory.html page is loaded
+2. Locate the product "Sauce Labs Backpack"
+3. Click `Remove` button for this product
+4. Locate cart icon in the top right corner
+5. Observ cart badge counter
+
+**Expected Result:**
+
+- Product "Sauce Labs Backpack" is removed from cart 
+-
+
+
+**Actual Result:**
+**Status:**
+**JIRA:** EPIC-02 / TC-INVENTORY-010
+
+---
