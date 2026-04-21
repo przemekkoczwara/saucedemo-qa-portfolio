@@ -361,12 +361,57 @@
 
 **Expected Result:**
 
-- Product "Sauce Labs Backpack" is removed from cart 
--
+- Product is removed from cart
+- Cart counter is updated correctly
+- User can add the product again
+
 
 
 **Actual Result:**
 **Status:**
 **JIRA:** EPIC-02 / TC-INVENTORY-010
 
----
+--- 
+
+## TC-INVENTORY-010: Remove product from details page
+
+> **Why this TC?**
+> Verify that clicking "Remove" button on product details page removes product from cart and updates cart badge counter correctly.
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-INVENTORY-010 |
+| **Module** | Inventory |
+| **Priority** | 🟡 Medium |
+| **Type** | Positive / Functional |
+| **Preconditions** | User is logged in as standard_user, on /inventory-item.html?id=4 page, and product "Sauce Labs Backpack" is arleady added to cart |
+| **Test Data** | N/A |
+
+## TC-INVENTORY-010: Remove product from details page
+
+> **Why this TC?**
+> Verify that clicking "Remove" button on product details page removes product from cart and updates cart badge counter correctly.
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-INVENTORY-010 |
+| **Module** | Inventory |
+| **Priority** | 🟡 Medium |
+| **Type** | Positive / Functional |
+| **Preconditions** | User is logged in as standard_user, on /inventory-item.html?id=4 page, and product "Sauce Labs Backpack" is arleady added to cart |
+| **Test Data** | N/A |
+
+**Steps:**
+1. Verify product details page for "Sauce Labs Backpack" is displayed 
+2. Verify that /inventory-item.html?id=4 page loads
+3. Verify that "Remove" button is visible
+4. Click "Remove" button
+5. Verify product is no longer listed in cart
+
+
+**Expected Result:**
+
+- 
+- Cart counter is updated correctly
+- User can add the product again
+
