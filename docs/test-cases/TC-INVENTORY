@@ -411,7 +411,8 @@
 
 **Expected Result:**
 
-- 
-- Cart counter is updated correctly
-- User can add the product again
+- Product is removed from cart.
+- Cart badge counter decreases by 1 or disappears if it was the only item.
+- "Remove" button changes to "Add to cart".
+- Product is not visible in cart page.
 
