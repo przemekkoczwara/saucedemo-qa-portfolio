@@ -121,7 +121,7 @@
 
 ---
 
-## TC-INVENTORY-004: Product sorted alphabetically A→Z
+## TC-INVENTORY-004: Product sorted alphabetically Z→A 
 
 > **Why this TC?**
 > Sorting Z→A is a separate function from A→Z and must be tested independently.
@@ -357,7 +357,7 @@
 2. Locate the product "Sauce Labs Backpack"
 3. Click `Remove` button for this product
 4. Locate cart icon in the top right corner
-5. Observ cart badge counter
+5. Observe cart badge counter
 
 **Expected Result:**
 
@@ -366,35 +366,21 @@
 - User can add the product again
 
 
-
 **Actual Result:**
 **Status:**
 **JIRA:** EPIC-02 / TC-INVENTORY-010
 
 --- 
 
-## TC-INVENTORY-010: Remove product from details page
+
+## TC-INVENTORY-011: Remove product from details page
 
 > **Why this TC?**
 > Verify that clicking "Remove" button on product details page removes product from cart and updates cart badge counter correctly.
 
 | Field | Details |
 |-------|---------|
-| **ID** | TC-INVENTORY-010 |
-| **Module** | Inventory |
-| **Priority** | 🟡 Medium |
-| **Type** | Positive / Functional |
-| **Preconditions** | User is logged in as standard_user, on /inventory-item.html?id=4 page, and product "Sauce Labs Backpack" is arleady added to cart |
-| **Test Data** | N/A |
-
-## TC-INVENTORY-010: Remove product from details page
-
-> **Why this TC?**
-> Verify that clicking "Remove" button on product details page removes product from cart and updates cart badge counter correctly.
-
-| Field | Details |
-|-------|---------|
-| **ID** | TC-INVENTORY-010 |
+| **ID** | TC-INVENTORY-011 |
 | **Module** | Inventory |
 | **Priority** | 🟡 Medium |
 | **Type** | Positive / Functional |
@@ -415,4 +401,46 @@
 - Cart badge counter decreases by 1 or disappears if it was the only item.
 - "Remove" button changes to "Add to cart".
 - Product is not visible in cart page.
+
+**Actual Result:**
+**Status:**
+**JIRA:** EPIC-02 / TC-INVENTORY-011
+
+---
+
+## TC-INVENTORY-012: Verify product image are correct for problem_user
+
+> **Why this TC?**
+> `problem_user` is a special test account designed to expose visual bugs 
+> We verify that the product image match the correct products, incorrect images 
+> would confuse real users and damage trust in the store
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-INVENTORY-012|
+| **Module** | Inventory |
+| **Priority** | 🔴 High |
+| **Type** | Negative / Visual |
+| **Preconditions** | User is logged in as problem_user on /inventory.html page |
+| **Test Data** | N/A |
+
+**Steps:**
+1. Observe the product list on /inventory.html
+2. Check the image displayed for each of the 6 products
+3. Compare each image with the corresponding product name
+**Expected Result:**
+
+Expected Result:
+- Each of the 6 products displays a unique image
+- Each image matches the corresponding product name
+  (e.g. backpack image for "Sauce Labs Backpack")
+
+**Actual Result:**
+**Status:**
+**Notes:** If images do not match products — raise a bug report in Jira
+**Related Bug:** BUG-001 (to be created upon test execution)
+**JIRA:** EPIC-02 / TC-INVENTORY-012
+
+---
+
 
