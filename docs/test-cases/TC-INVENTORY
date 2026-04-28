@@ -396,7 +396,6 @@
 
 
 **Expected Result:**
-
 - Product is removed from cart.
 - Cart badge counter decreases by 1 or disappears if it was the only item.
 - "Remove" button changes to "Add to cart".
@@ -430,7 +429,7 @@
 3. Compare each image with the corresponding product name
 **Expected Result:**
 
-Expected Result:
+**Expected Result:**
 - Each of the 6 products displays a unique image
 - Each image matches the corresponding product name
   (e.g. backpack image for "Sauce Labs Backpack")
@@ -443,4 +442,110 @@ Expected Result:
 
 ---
 
+## TC-INVENTORY-013: Verify menu icon is correct for visual_user
+
+> **Why this TC?**
+> `visual_user` is a special test account designed to expose visual bugs 
+> We verify that the menu icon is correctly positioned
+> An incorrect position would confuse real users and damage trust in the store
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-INVENTORY-013|
+| **Module** | Inventory |
+| **Priority** | 🔴 High |
+| **Type** | Negative / Visual |
+| **Preconditions** | User is logged in as visual_user on /inventory.html page |
+| **Test Data** | N/A |
+
+**Steps:**
+1. Locate the menu icon on the top left corner
+2. Verify that the icon is correctly aligned both vertically and horizontally
+
+**Expected Result:**
+- Menu icon is visible in the top left corner
+- Menu icon is correctly aligned both vertically and horizontally
+
+
+**Actual Result:**
+**Status:**
+**Notes:** If icon is incorrectly positioned - raise a bug report in Jira
+**Related Bug:** BUG-002 (to be created upon test execution)
+**JIRA:** EPIC-02 / TC-INVENTORY-013
+
+---
+
+## TC-INVENTORY-014: Verify cart icon is correct for visual_user
+
+> **Why this TC?**
+> `visual_user` is a special test account designed to expose visual bugs 
+> We verify that the cart icon is correctly positioned
+> An incorrect position would confuse real users and damage trust in the store
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-INVENTORY-014|
+| **Module** | Inventory |
+| **Priority** | 🔴 High |
+| **Type** | Negative / Visual |
+| **Preconditions** | User is logged in as visual_user on /inventory.html page |
+| **Test Data** | N/A |
+
+**Steps:**
+1. Locate the cart icon on the top right corner
+2. Verify that the cart icon is correctly aligned both vertically and horizontally
+
+**Expected Result:**
+- Cart icon is visible in the top right corner
+- Cart icon is correctly aligned both vertically and horizontally
+
+
+**Actual Result:**
+**Status:**
+**Notes:** If cart icon is incorrectly positioned - raise a bug report in Jira
+**Related Bug:** BUG-003 (to be created upon test execution)
+**JIRA:** EPIC-02 / TC-INVENTORY-014
+
+---
+
+## TC-INVENTORY-015: Verify that error_user can add all 6 products to cart
+
+> **Why this TC?**
+> `error_user` is a special test account designed to expose functional bugs.
+> We verify that the user can add all 6 products to the cart.
+> Being unable to add all products would block the shopping process
+> and directly impact the user experience.
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-INVENTORY-015|
+| **Module** | Inventory |
+| **Priority** | 🔴 High |
+| **Type** | Negative / Functional |
+| **Preconditions** | User is logged in as error_user on /inventory.html page |
+| **Test Data** | N/A |
+
+**Steps:**
+1. Locate the first product on /inventory.html
+2. Click "Add to cart" button for the first product
+3. Observe the cart badge counter
+4. Repeat steps 1-3 for all 6 products
+5. Observe the cart badge counter after adding each product
+
+**Expected Result:**
+- Page /inventory.html displays exactly 6 products
+- Each produkt has a "add to cart" button
+- After adding first product cart badge icon counter is visible and shows 1
+- After each subsequent product is added, the cart badge increments +1
+- After added all 6 products, cart badge displays 6
+- The cart badge updates immediately after each click (no delay or incorrect values)
+
+
+**Actual Result:**
+**Status:**
+**Notes:** If cart icon badge displays incorrectly values or connot updates counter or connot add products  - raise a bug report in Jira
+**Related Bug:** BUG-003 (to be created upon test execution)
+**JIRA:** EPIC-02 / TC-INVENTORY-015
+
+---
 
