@@ -2,8 +2,8 @@
 
 **Module:** Inventory
 **Author:** Przemysław Koczwara
-**Last Updated:** 2026-04-10
-**Total TC:** 13
+**Last Updated:** 2026-04-30
+**Total TC:** 16
 **JIRA Epic:** EPIC-02 — Product Catalog (Inventory) Testing
 
 ---
@@ -427,7 +427,6 @@
 1. Observe the product list on /inventory.html
 2. Check the image displayed for each of the 6 products
 3. Compare each image with the corresponding product name
-**Expected Result:**
 
 **Expected Result:**
 - Each of the 6 products displays a unique image
@@ -534,7 +533,7 @@
 
 **Expected Result:**
 - Page /inventory.html displays exactly 6 products
-- Each produkt has a "add to cart" button
+- Each product has a "add to cart" button
 - After adding first product cart badge icon counter is visible and shows 1
 - After each subsequent product is added, the cart badge increments +1
 - After added all 6 products, cart badge displays 6
@@ -543,9 +542,46 @@
 
 **Actual Result:**
 **Status:**
-**Notes:** If cart icon badge displays incorrectly values or connot updates counter or connot add products  - raise a bug report in Jira
-**Related Bug:** BUG-003 (to be created upon test execution)
+**Notes:** If cart icon badge displays incorrectly values or cannot updates counter or cannot add products  - raise a bug report in Jira
+**Related Bug:** BUG-005 (to be created upon test execution)
 **JIRA:** EPIC-02 / TC-INVENTORY-015
 
 ---
 
+## TC-INVENTORY-016: Verify that error_user can remove product from cart 
+
+> **Why this TC?**
+> `error_user` is a special test account designed to expose functional bugs.
+> We verify that the user can remove product from cart.
+> Being unable to remove product would block the shopping process
+> and directly impact the user experience.
+
+| Field | Details |
+|-------|---------|
+| **ID** | TC-INVENTORY-016|
+| **Module** | Inventory |
+| **Priority** | 🔴 High |
+| **Type** | Negative / Functional |
+| **Preconditions** | User is logged in as error_user on /inventory.html page, at least 1 product is already added to cart|
+| **Test Data** | N/A |
+
+**Steps:**
+1. Locate a product with "Remove" button on /inventory.html
+2. Click "Remove" button for that product
+3. Observe the cart badge counter
+4. Repeat steps 1-3 for remaining products in cart
+
+**Expected Result:**
+- At least 1 product in cart has a "Remove" button visible
+- After each product is removed, the cart badge decrements by 1
+- After all products are removed, cart badge disappears
+- The cart badge updates immediately after each click (no delay or incorrect values)
+
+
+**Actual Result:**
+**Status:**
+**Notes:** If user cannot remove product or cart bagde does not update correctly - raise a bug report in Jira
+**Related Bug:** BUG-006 (to be created upon test execution)
+**JIRA:** EPIC-02 / TC-INVENTORY-016
+
+---
