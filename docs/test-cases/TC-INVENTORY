@@ -479,8 +479,15 @@ Status:
 - "Remove" button changes to "Add to cart".
 - Product is not visible in cart page.
 
-**Actual Result:**
+**Actual Results:**
+- Product is removed from cart
+- Cart badge counter disappeared
+- Remove button changed to Add to cart
+- Product is not visible in cart page
+
 **Status:**
+✅ Pass
+
 **JIRA:** EPIC-02 / TC-INVENTORY-011
 
 ---
@@ -512,9 +519,14 @@ Status:
   (e.g. backpack image for "Sauce Labs Backpack")
 
 **Actual Result:**
+- All products has the same wrong images “dog picture“
+
 **Status:**
+🔴 Fail
+
+
 **Notes:** If images do not match products — raise a bug report in Jira
-**Related Bug:** BUG-001 (to be created upon test execution)
+**Related Bug:** BUG-001 - SDP-37 [VISUAL] All products displays incorrect dog image for problem_user
 **JIRA:** EPIC-02 / TC-INVENTORY-012
 
 ---
@@ -544,10 +556,17 @@ Status:
 - Menu icon is correctly aligned both vertically and horizontally
 
 
-**Actual Result:**
+**Actual Results:**
+
+- Menu icon is visible in the top left corner
+- Menu icon is not correctly aligned horizontally 
+
 **Status:**
+
+🅇 Fail
+
 **Notes:** If icon is incorrectly positioned - raise a bug report in Jira
-**Related Bug:** BUG-002 (to be created upon test execution)
+**Related Bug:** BUG-002 SDP-38 [VISUAL] Menu icon is misaligned for visual_user
 **JIRA:** EPIC-02 / TC-INVENTORY-013
 
 ---
@@ -577,10 +596,17 @@ Status:
 - Cart icon is correctly aligned both vertically and horizontally
 
 
-**Actual Result:**
+**Actual Results:**
+
+- Cart icon is visible but incorrectly positioned on the page
+- Cart icon is misaligned — located in wrong position
+compared to standard layout
+
 **Status:**
+🅇 Fail
+
 **Notes:** If cart icon is incorrectly positioned - raise a bug report in Jira
-**Related Bug:** BUG-003 (to be created upon test execution)
+**Related Bug:** BUG-003 SDP-39 [VISUAL] Cart icon is misaligned for visual_user
 **JIRA:** EPIC-02 / TC-INVENTORY-014
 
 ---
@@ -618,10 +644,19 @@ Status:
 - The cart badge updates immediately after each click (no delay or incorrect values)
 
 
-**Actual Result:**
+**Actual Results:**
+- 6 products are visible
+- Each product has a Add to cartbutton
+- After adding first product cart badge icon counter is visible and shows 1
+- After each subsequent product is added, the cart badge increments +1
+- Cannot add all 6 products 
+- The cart badge stops after added 3 products
+
 **Status:**
+🅇 Fail
+
 **Notes:** If cart icon badge displays incorrectly values or cannot updates counter or cannot add products  - raise a bug report in Jira
-**Related Bug:** BUG-005 (to be created upon test execution)
+**Related Bug:** BUG-005 SDP-40 [FUNCTIONAL] error_user can add maximum 
 **JIRA:** EPIC-02 / TC-INVENTORY-015
 
 ---
@@ -656,10 +691,17 @@ Status:
 - The cart badge updates immediately after each click (no delay or incorrect values)
 
 
-**Actual Result:**
+**Actual Results:**
+- Cart icon badge has 3 products
+- Cannot remove each product 
+- The cart badge doesn’t update after each click
+
 **Status:**
+🅇 Fail
+
+
 **Notes:** If user cannot remove product or cart bagde does not update correctly - raise a bug report in Jira
-**Related Bug:** BUG-006 (to be created upon test execution)
+**Related Bug:** BUG-006 SDP-41 [FUNCTIONAL] error_user cannot remove products from cart 
 **JIRA:** EPIC-02 / TC-INVENTORY-016
 
 ---
