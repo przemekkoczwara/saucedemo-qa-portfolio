@@ -44,7 +44,15 @@
 - Product sorting dropdown is visible
 
 **Actual Result:**
+- The /inventory.html page loads correctly
+- Page "Swag Labs" is visible
+- 6 products are visible 
+- Shopping cart icon is visible in the top right corner
+- Product sorting dropdown is visible
+
 **Status:**
+✅ Pass
+
 **Notes:** Smoke Test — execute this first before any other TC in this module
 **JIRA:** EPIC-02 / TC-INVENTORY-001
 
@@ -77,7 +85,13 @@
 - Add to cart button is visible for each product
 
 **Actual Result:**
+- 6 products are visible on the page
+- Each product has: name, description, price and image
+- Button “Add to cart” is visible for each product 
+
 **Status:**
+✅ Pass
+
 **JIRA:** EPIC-02 / TC-INVENTORY-002
 
 
@@ -116,7 +130,13 @@
 - Last product: "Test.allTheThings() T-Shirt (Red)"
 
 **Actual Result:**
+-6 products are visible on the page
+- Products are sorted alphabetically from A to Z by name
+- First product is: "Sauce Labs Backpack"
+- Last product is: "Test.allTheThings() T-Shirt (Red)"
+
 **Status:**
+✅ Pass
 **JIRA:** EPIC-02 / TC-INVENTORY-003
 
 ---
@@ -151,7 +171,15 @@
 - Last product: "Sauce Labs Backpack"
 
 **Actual Result:**
+
+- 6 products are visible on the page
+- Products are sorted alphabetically from Z to A by name
+- First product is: "Test.allTheThings() T-Shirt (Red)"
+- Last product is: "Sauce Labs Backpack"
+
 **Status:**
+✅ Pass
+
 **JIRA:** EPIC-02 / TC-INVENTORY-004
 
 ---
@@ -185,6 +213,16 @@
 - Last product: "Sauce Labs Fleece Jacket" with price ($49.99)
 
 **Actual Result:**
+
+- 6 products are visible on the page
+- Products are sorted by price in ascending order (lowest to highest)
+- First product is: "Sauce Labs Onesie" with price ($7.99)
+- Last product is: "Sauce Labs Fleece Jacket" with price ($49.99)
+
+**Status:**
+
+✅ Pass
+
 **Status:**
 **JIRA:** EPIC-02 / TC-INVENTORY-005
 
