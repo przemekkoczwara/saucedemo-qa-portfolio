@@ -171,7 +171,6 @@
 - Last product: "Sauce Labs Backpack"
 
 **Actual Result:**
-
 - 6 products are visible on the page
 - Products are sorted alphabetically from Z to A by name
 - First product is: "Test.allTheThings() T-Shirt (Red)"
@@ -213,14 +212,12 @@
 - Last product: "Sauce Labs Fleece Jacket" with price ($49.99)
 
 **Actual Result:**
-
 - 6 products are visible on the page
 - Products are sorted by price in ascending order (lowest to highest)
 - First product is: "Sauce Labs Onesie" with price ($7.99)
 - Last product is: "Sauce Labs Fleece Jacket" with price ($49.99)
 
 **Status:**
-
 ✅ Pass
 
 **Status:**
@@ -257,6 +254,14 @@
 - Last product: "Sauce Labs Onesie" with price ($7.99)
 
 **Actual Result:**
+- 6 products are visible 
+- Products are sorted by price in descending order (highest to lowest)
+- First product is: "Sauce Labs Fleece Jacket" with price ($49.99)
+- Last product is: "Sauce Labs Onesie" with price ($7.99)
+
+
+**Status:**
+✅ Pass
 **Status:**
 **JIRA:** EPIC-02 / TC-INVENTORY-006
 
@@ -294,7 +299,17 @@
 - `Add to cart` button is visible
 
 **Actual Result:**
+- Product details page open correctly
+- URL contains inventory-item.html?id=4
+- Product name “Sauce Labs Backpack” is visible
+- Product description is visible
+- Product price ($29.99) is visible
+- Product image is visible
+- Add to cart button is visible
+
 **Status:**
+✅ Pass
+
 **JIRA:** EPIC-02 / TC-INVENTORY-007
 
 ---
@@ -329,6 +344,15 @@
 - `Add to cart`button changes to `Remove` button
 
 **Actual Result:**
+- Product “Sauce Labs Backpack” is added to the cart
+- Cart badge counter is visible
+- Cart badge counter has increased by 1 
+- Add to cart button changed to Remove button
+
+Status:
+✅ Pass
+
+
 **Status:**
 **JIRA:** EPIC-02 / TC-INVENTORY-008
 
@@ -368,8 +392,17 @@
 - Cart badge counter increases by 1
 - `Add to cart` button changes to `Remove`
 
-**Actual Result:**
+**Actual Results:**
+- Product details page opens correctly
+- Product name Sauce Labs Backpack is visible
+- Product is added to cart
+- Cart badge counter is visible
+- Cart badge counter increased by 1
+- Add to cart button changed to Remove button
+
 **Status:**
+✅ Pass
+
 **JIRA:** EPIC-02 / TC-INVENTORY-009
 
 ---
@@ -403,6 +436,13 @@
 - Cart counter is updated correctly
 - User can add the product again
 
+**Actual Results:**
+- Product is removed from cart
+- Cart counter is updated correctly
+- User can add the product again
+
+**Status:**
+✅ Pass
 
 **Actual Result:**
 **Status:**
